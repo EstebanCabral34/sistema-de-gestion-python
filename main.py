@@ -75,4 +75,17 @@ def buscar_producto(productos):
     
     
     print('Producto no encontrado.')
-    return None   
+    return None
+
+def actualizar_stock(productos):
+
+    indice = buscar_producto(productos)
+
+    if(indice != None):
+        nuevoStock = input('Ingrese el nuevo stock: ')
+        if(nuevoStock.isdigit() == False):
+            print('Tipo de dato incorrecto solo pueden ser numeros enteros')
+        else:
+            nuevoStock = int(nuevoStock)
+            indice['stock'] = nuevoStock
+            print('Stock actualizado correctamente.')
