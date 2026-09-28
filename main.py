@@ -45,3 +45,13 @@ def agregar_producto(productos):
         break
 
     return productos
+
+def listar_productos(productos):
+    if not productos:
+        print('No hay productos cargados!!!')
+    else:
+        print('===== LISTADO DE PRODUCTOS =====')
+
+        for indice in productos:
+            for clave, valor in indice.items():
+                print(f'{clave}: {valor}')
