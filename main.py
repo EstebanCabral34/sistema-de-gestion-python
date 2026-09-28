@@ -55,3 +55,24 @@ def listar_productos(productos):
         for indice in productos:
             for clave, valor in indice.items():
                 print(f'{clave}: {valor}')
+
+def buscar_producto(productos):
+
+    while True:
+            id = input('Ingrese el id del producto = ')
+    
+            if(id.isdigit() == False):
+                print('Tipo de dato incorrecto solo pueden ser numeros enteros')
+                continue
+            else:
+                id = int(id)
+                break
+
+    for indice in productos:
+        if (id == indice.get('id')):
+            print('Producto encontrado!')
+            return indice
+    
+    
+    print('Producto no encontrado.')
+    return None   
