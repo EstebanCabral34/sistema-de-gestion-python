@@ -89,3 +89,14 @@ def actualizar_stock(productos):
             nuevoStock = int(nuevoStock)
             indice['stock'] = nuevoStock
             print('Stock actualizado correctamente.')
+
+def calcular_valor_inventario(productos):
+    total = 0
+    
+    for indice in productos:
+        stockInventario = indice.get('stock')
+        precioInventario = indice.get('precio')
+        total += precioInventario * stockInventario
+
+    print(f'El valor del inventario es de {total}')
+    return total
