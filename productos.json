@@ -1,1 +1,51 @@
-[{"id": 1, "nombre": "Hueso", "categoria": "Juguete de perro", "precio": 2300.0, "stock": 50}, {"id": 5, "nombre": "Frutilla", "categoria": "frutas", "precio": 10000.0, "stock": 50}, {"id": 5, "nombre": "algo", "categoria": "asd", "precio": 242.0, "stock": 3}]
+[
+    {
+        "id": 1,
+        "nombre": "Pelota",
+        "categoria": "Deportes",
+        "precio": 30000.0,
+        "stock": 20
+    },
+    {
+        "id": 2,
+        "nombre": "Caja de carton",
+        "categoria": "Embalaje",
+        "precio": 1000.0,
+        "stock": 5000
+    },
+    {
+        "id": 3,
+        "nombre": "Televisor",
+        "categoria": "Electrodomesticos",
+        "precio": 400000.0,
+        "stock": 200
+    },
+    {
+        "id": 4,
+        "nombre": "Papel Burbuja",
+        "categoria": "Embalaje",
+        "precio": 1000.0,
+        "stock": 50000
+    },
+    {
+        "id": 5,
+        "nombre": "Aro de basquet",
+        "categoria": "Deportes",
+        "precio": 90000.0,
+        "stock": 50
+    },
+    {
+        "id": 6,
+        "nombre": "Mouse",
+        "categoria": "Computacion",
+        "precio": 50000.0,
+        "stock": 200
+    },
+    {
+        "id": 7,
+        "nombre": "Monitor",
+        "categoria": "Computacion",
+        "precio": 400000.0,
+        "stock": 500
+    }
+]
