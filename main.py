@@ -6,11 +6,22 @@ def agregar_producto(productos):
     while True:
         id = input('Ingrese el id del producto = ')
 
-        if(id.isdigit() == False):
-            print('Tipo de dato incorrecto solo pueden ser numeros enteros')
+        if id.isdigit() == False:
+            print('Tipo de dato incorrecto, solo pueden ser numeros enteros')
             continue
         else:
             id = int(id)
+
+        id_existe = False
+
+        for producto in productos:
+            if producto['id'] == id:
+                id_existe = True
+                break
+
+        if id_existe:
+            print('Ese ID ya existe.')
+            continue
 
         nombre = input('Ingrese el nombre del producto = ')
 
@@ -18,17 +29,24 @@ def agregar_producto(productos):
 
         precio = input('Ingrese el precio del producto = ')
 
-        if(precio.isdecimal() == False):
-            print('Tipo de dato incorrecto solo pueden ser numeros decimales')
+        precio = precio.replace(',', '.')
+
+        if precio.count('.') > 1:
+            print('Precio invalido')
+            continue
+
+        partes = precio.split('.')
+
+        if not all(parte.isdigit() for parte in partes):
+            print('Precio invalido')
             continue
         else:
-            precio = precio.replace(',', '.')
             precio = float(precio)
 
         stock = input('Ingrese el stock del producto = ')
 
-        if(stock.isdigit() == False):
-            print('Tipo de dato incorrecto solo pueden ser numeros enteros')
+        if stock.isdigit() == False:
+            print('Tipo de dato incorrecto, solo pueden ser numeros enteros')
             continue
         else:
             stock = int(stock)
@@ -38,10 +56,11 @@ def agregar_producto(productos):
             'nombre': nombre,
             'categoria': categoria,
             'precio': precio,
-            'stock': stock}
+            'stock': stock
+        }
 
         productos.append(producto)
-        
+
         print('✅ ¡Producto agregado con éxito!')
 
         break
@@ -172,5 +191,3 @@ def main():
 
             case _:
                 print('Ingrese una opcion valida!!')
-
-main()
