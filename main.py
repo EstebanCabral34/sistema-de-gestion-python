@@ -1,3 +1,5 @@
+import json
+
 productos = []
 
 def agregar_producto(productos):
@@ -109,3 +111,12 @@ def eliminar_producto(productos):
         print('Producto eliminado con exito!')
     else:
         print('El producto no existe.')
+
+def cargar_productos():
+    archivo = open('productos.json', 'r')
+
+    productos = json.load(archivo)
+
+    archivo.close()
+
+    return productos
