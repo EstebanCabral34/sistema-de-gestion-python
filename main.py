@@ -120,3 +120,10 @@ def cargar_productos():
     archivo.close()
 
     return productos
+
+def guardar_productos(productos):
+    archivo = open('productos.json', 'w')
+
+    json.dump(productos, archivo)
+
+    archivo.close()
