@@ -100,3 +100,12 @@ def calcular_valor_inventario(productos):
 
     print(f'El valor del inventario es de {total}')
     return total
+
+def eliminar_producto(productos):
+    indice = buscar_producto(productos)
+
+    if(indice != None):
+        productos.remove(indice)
+        print('Producto eliminado con exito!')
+    else:
+        print('El producto no existe.')
